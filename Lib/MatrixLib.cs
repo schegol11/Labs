@@ -1,4 +1,6 @@
-public static class Lib
+namespace Lib;
+
+public static class MatrixLib
 {
     public static int[] SumColumns(int[,] matrix)
     {

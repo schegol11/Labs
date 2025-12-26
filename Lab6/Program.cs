@@ -57,20 +57,22 @@
 
 // Базовый уровень
 
-// int[,] matrix = new int[4,5];
-// for (int i = 0; i < 4; i++)
-// {
-//     for (int j = 0; j < 5; j++)
-//     {
-//         Console.Write($"Введите число для [{i}, {j}]: ");
-//         matrix[i, j] = int.Parse(Console.ReadLine()!);
-//     }
-// }
+using Lib;
 
-// int[] sums = Lib.SumColumns(matrix);
-// Console.Write($"Суммы:");
+int[,] matrix = new int[4,5];
+for (int i = 0; i < 4; i++)
+{
+    for (int j = 0; j < 5; j++)
+    {
+        Console.Write($"Введите число для [{i}, {j}]: ");
+        matrix[i, j] = int.Parse(Console.ReadLine()!);
+    }
+}
 
-// foreach (var num in sums)
-// {
-// 	Console.Write($"{num} ");
-// }
+int[] sums = Lib.MatrixLib.SumColumns(matrix);
+Console.Write($"Суммы:");
+
+foreach (var num in sums)
+{
+	Console.Write($"{num} ");
+}

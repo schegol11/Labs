@@ -28,65 +28,42 @@
 
 // Средний уровень
 
-// Student s1 = new()
-// {
-//     Number = 1,
-//     FullName = "Ivanov Ivan Ivanovich",
-//     BirthDay = 15,
-//     BirthMonth = 5,
-//     BirthYear = 2003,
-//     Age = DateTime.Now.Year - 2003
-// };
+// Student[] students;
+// string[] daysOfWeek = { "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" };
 
-// Student s2 = new()
-// {
-//     Number = 2,
-//     FullName = "Petrova Anna Sergeevna",
-//     BirthDay = 22,
-//     BirthMonth = 3,
-//     BirthYear = 2004,
-//     Age = DateTime.Now.Year - 2004
-// };
+// Console.Write("Введите количество студентов: ");
+// int studentCount = int.Parse(Console.ReadLine()!);
+// students = new Student[studentCount];
 
-// Student s3 = new()
+// for (int i = 0; i < studentCount; i++)
 // {
-//     Number = 3,
-//     FullName = "Sidorov Alexey Petrovich",
-//     BirthDay = 10,
-//     BirthMonth = 7,
-//     BirthYear = 2002,
-//     Age = DateTime.Now.Year - 2002
-// };
+//     Student student = new Student();
 
-// Student s4 = new()
-// {
-//     Number = 4,
-//     FullName = "Kuznetsova Maria Dmitrievna",
-//     BirthDay = 29,
-//     BirthMonth = 2,
-//     BirthYear = 2000,
-//     Age = DateTime.Now.Year - 2000
-// };
+//     Console.WriteLine($"Студент {i + 1}:");
+//     student.Number = i + 1;
 
-// Student s5 = new()
-// {
-//     Number = 5,
-//     FullName = "Smirnov Pavel Olegovich",
-//     BirthDay = 14,
-//     BirthMonth = 11,
-//     BirthYear = 2003,
-//     Age = DateTime.Now.Year - 2003
-// };
+//     Console.Write("ФИО: ");
+//     student.FullName = Console.ReadLine()!;
 
-// Student[] students = { s1, s2, s3, s4, s5 };
-// string[] daysOfWeek = {"Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"};
+//     Console.Write("День рождения: ");
+//     student.BirthDay = int.Parse(Console.ReadLine()!);
+
+//     Console.Write("Месяц рождения: ");
+//     student.BirthMonth = int.Parse(Console.ReadLine()!);
+
+//     Console.Write("Год рождения: ");
+//     student.BirthYear = int.Parse(Console.ReadLine()!);
+
+//     student.Age = DateTime.Now.Year - student.BirthYear;
+
+//     students[i] = student;
+// }
 
 // foreach (var student in students)
 // {
-//     students[student.Number - 1].Age = DateTime.Now.Year - student.BirthYear;
 //     DateTime birthDate = new DateTime(student.BirthYear, student.BirthMonth, student.BirthDay);
 //     int dayOfWeek = ((int)birthDate.DayOfWeek == 0) ? 7 : (int)birthDate.DayOfWeek;
-    
+
 //     Console.WriteLine($"Имя: {student.FullName}");
 //     Console.WriteLine($"День рождения: {birthDate:dd.MM.yyyy}");
 //     Console.WriteLine($"День недели: {daysOfWeek[dayOfWeek - 1]} ({dayOfWeek})");
@@ -94,10 +71,11 @@
 //     Console.WriteLine();
 // }
 
-// Console.WriteLine("Студенты, которые родились в високостный год: ");
+// Console.WriteLine("Студенты, которые родились в високосный год: ");
 // foreach (var student in students)
 // {
-//     if (DateTime.IsLeapYear(student.BirthYear)) Console.WriteLine($"{student.FullName} ({student.BirthDay:00}.{student.BirthMonth:00}.{student.BirthYear})");
+//     if (DateTime.IsLeapYear(student.BirthYear))
+//         Console.WriteLine($"{student.FullName} ({student.BirthDay:00}.{student.BirthMonth:00}.{student.BirthYear})");
 // }
 
 // struct Student

@@ -135,3 +135,39 @@
 // }
 
 // Console.WriteLine($"Сумма {n} членов ряда: {sum:f2}");
+
+// Табулирование функций
+
+
+// Базовый уровень
+
+// Console.Write("Введите начало: ");
+// var start = double.Parse(Console.ReadLine()!);
+
+// Console.Write("Введите конец: ");
+// var end = double.Parse(Console.ReadLine()!);
+// double step = 0.2;
+
+// for (double x = start; x <= end; x += step)
+// {
+//     double y = Math.Pow(x, 2) - Math.Sin(Math.PI * x);
+//     Console.WriteLine($"x: {x:f2}, y: {y:f2}");
+// }
+
+
+// Средний уровень
+
+// double start = -Math.PI / 4;
+// double end = 7 * Math.PI / 4;
+// double step = 0.2;
+
+// for (double x = start; x <= end; x += step)
+// {
+//     double y;
+
+//     if (x < 0) y = x * x;
+//     else if (x >= 0 && x <= 2.5) y = 1 + 3 * Math.Log(1 - Math.Pow(x, 3));
+//     else y = Math.Cos(2.3 * x - 1);
+
+//     Console.WriteLine($"x: {x:f2}, y: {y:f2}");
+// }

@@ -3,44 +3,42 @@
 
 // Базовый уровень
 
+// Console.Write("Введите количество товаров: ");
+// int productCount = int.Parse(Console.ReadLine()!);
+// Product[] products = new Product[productCount];
 
-// Product laptop = new()
+// for (int i = 0; i < productCount; i++)
 // {
-//     SallerName = "Ivan",
-//     ProductName = "Laptop",
-//     Multiply = 1,
-//     Cost = 25000,
-//     SellDate = new DateTime(2024, 5, 11)
-// };
+//     Product product = new Product();
+    
+//     Console.WriteLine($"Товар {i + 1}:");
+    
+//     Console.Write("Имя продавца: ");
+//     product.SallerName = Console.ReadLine()!;
+    
+//     Console.Write("Название товара: ");
+//     product.ProductName = Console.ReadLine()!;
+    
+//     Console.Write("Количество: ");
+//     product.Multiply = int.Parse(Console.ReadLine()!);
+    
+//     Console.Write("Цена: ");
+//     product.Cost = int.Parse(Console.ReadLine()!);
+    
+//     Console.Write("День продажи: ");
+//     int day = int.Parse(Console.ReadLine()!);
+    
+//     Console.Write("Месяц продажи: ");
+//     int month = int.Parse(Console.ReadLine()!);
+    
+//     Console.Write("Год продажи: ");
+//     int year = int.Parse(Console.ReadLine()!);
+    
+//     product.SellDate = new DateTime(year, month, day);
+    
+//     products[i] = product;
+// }
 
-// Product phone = new()
-// {
-//     SallerName = "Michail",
-//     ProductName = "Phone",
-//     Multiply = 2,
-//     Cost = 7500,
-//     SellDate = new DateTime(2021, 4, 4)
-// };
-
-// Product pc = new()
-// {
-//     SallerName = "Petr",
-//     ProductName = "PC",
-//     Multiply = 1,
-//     Cost = 15400,
-//     SellDate = new DateTime(2025, 1, 15)
-// };
-
-// Product microphone = new()
-// {
-//     SallerName = "Oleg",
-//     ProductName = "Microphone",
-//     Multiply = 1,
-//     Cost = 2500,
-//     SellDate = new DateTime(2024, 12, 15)
-// };
-
-// Product[] products = { laptop, phone, pc, microphone };
 // DateTime currentDate = DateTime.Now;
 
 // foreach (var product in products)
@@ -64,91 +62,79 @@
 //     public DateTime SellDate;
 // }
 
-
 // Средний уровень
 
 
-Worker w1 = new()
-{
-    LastName = "Ivanov",
-    FirstName = "Ivan",
-    MiddleName = "Ivanovich",
-    Job = "Developer",
-    Salary = 85000,
-    BirthDate = new DateTime(1998, 5, 15)
-};
+// Console.Write("Введите количество работников: ");
+// int workerCount = int.Parse(Console.ReadLine()!);
+// Worker[] workers = new Worker[workerCount];
 
-Worker w2 = new()
-{
-    LastName = "Petrov",
-    FirstName = "Petr",
-    MiddleName = "Petrovich",
-    Job = "Tester",
-    Salary = 55000,
-    BirthDate = new DateTime(1990, 3, 22)
-};
+// for (int i = 0; i < workerCount; i++)
+// {
+//     Worker worker = new Worker();
+    
+//     Console.WriteLine($"Работник {i + 1}:");
+    
+//     Console.Write("Фамилия: ");
+//     worker.LastName = Console.ReadLine()!;
+    
+//     Console.Write("Имя: ");
+//     worker.FirstName = Console.ReadLine()!;
+    
+//     Console.Write("Отчество: ");
+//     worker.MiddleName = Console.ReadLine()!;
+    
+//     Console.Write("Должность: ");
+//     worker.Job = Console.ReadLine()!;
+    
+//     Console.Write("Зарплата: ");
+//     worker.Salary = int.Parse(Console.ReadLine()!);
+    
+//     Console.Write("День рождения: ");
+//     int day = int.Parse(Console.ReadLine()!);
+    
+//     Console.Write("Месяц рождения: ");
+//     int month = int.Parse(Console.ReadLine()!);
+    
+//     Console.Write("Год рождения: ");
+//     int year = int.Parse(Console.ReadLine()!);
+    
+//     worker.BirthDate = new DateTime(year, month, day);
+    
+//     workers[i] = worker;
+// }
 
-Worker w3 = new()
-{
-    LastName = "Sidorova",
-    FirstName = "Anna",
-    MiddleName = "Sergeevna",
-    Job = "Designer",
-    Salary = 75000,
-    BirthDate = new DateTime(1995, 7, 10)
-};
+// DateTime currentDate = DateTime.Now;
 
-Worker w4 = new()
-{
-    LastName = "Kozlov",
-    FirstName = "Alex",
-    MiddleName = "Alexeevich",
-    Job = "Manager",
-    Salary = 80000,
-    BirthDate = new DateTime(1999, 11, 30)
-};
+// int averageSalary = 0;
+// foreach (var worker in workers) averageSalary += worker.Salary;
+// averageSalary /= workers.Length;
 
-Worker w5 = new()
-{
-    LastName = "Smirnova",
-    FirstName = "Maria",
-    MiddleName = "Dmitrievna",
-    Job = "Analyst",
-    Salary = 90000,
-    BirthDate = new DateTime(1997, 2, 14)
-};
+// Console.WriteLine($"Средняя зарплата: {averageSalary}");
+// Console.WriteLine("Сотрудники с зарплатой выше средней и возрастом до 30 лет:\n");
 
-Worker[] workers = { w1, w2, w3, w4, w5 };
-DateTime currentDate = DateTime.Now;
+// foreach (var worker in workers)
+// {
+//     int age = currentDate.Year - worker.BirthDate.Year;
+//     if (worker.BirthDate.AddYears(age) > currentDate) age--;
+    
+//     if (worker.Salary > averageSalary && age < 30)
+//     {
+//         Console.WriteLine($"ФИО: {worker.LastName} {worker.FirstName} {worker.MiddleName}");
+//         Console.WriteLine($"Должность: {worker.Job}");
+//         Console.WriteLine($"Зарплата: {worker.Salary}");
+//         Console.WriteLine($"Дата рождения: {worker.BirthDate:dd}.{worker.BirthDate:MM}.{worker.BirthDate:yyyy}");
+//         Console.WriteLine($"Возраст: {age}");
+//         Console.WriteLine();
+//     }
+// }
 
-
-int averageSalary = 0;
-foreach (var worker in workers) averageSalary += worker.Salary;
-
-averageSalary /= workers.Length;
-
-Console.WriteLine($"Средняя зарплата: {averageSalary}");
-Console.WriteLine("Сотрудники с зарплатой выше средней и возрастом до 30 лет:\n");
-
-foreach (var worker in workers)
-{
-    if (worker.Salary > averageSalary && (currentDate.Year - worker.BirthDate.Year) < 30)
-    {
-        Console.WriteLine($"ФИО: {worker.LastName} {worker.FirstName} {worker.MiddleName}");
-        Console.WriteLine($"Должность: {worker.Job}");
-        Console.WriteLine($"Зарплата: {worker.Salary}");
-        Console.WriteLine($"Дата рождения: {worker.BirthDate:dd}.{worker.BirthDate:MM}.{worker.BirthDate:yyyy}");
-        Console.WriteLine($"Возраст: {currentDate.Year - worker.BirthDate.Year}");
-        Console.WriteLine();
-    }
-}
-
-struct Worker
-{
-    public string LastName;
-    public string FirstName;
-    public string MiddleName;
-    public string Job;
-    public int Salary;
-    public DateTime BirthDate;
-}
+// struct Worker
+// {
+//     public string LastName;
+//     public string FirstName;
+//     public string MiddleName;
+//     public string Job;
+//     public int Salary;
+//     public DateTime BirthDate;
+// }
